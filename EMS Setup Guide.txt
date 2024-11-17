@@ -1,0 +1,57 @@
+Employee Management System - Setup and Installation Guide
+
+This guide will walk you through the setup and installation of the Employee Management System built using Spring Boot. The application uses Kafka for messaging, Zookeeper for Kafka coordination, and MySQL as the database.
+
+================================================================================================================
+Pre-requisites:
+
+Java 21 installed
+Maven installed
+Docker installed for running Kafka and Zookeeper in Docker Compose
+MySQL running locally for database setup
+
+==================================================================================================================
+
+Steps to Set Up the Application:
+
+1. Clone the Repository
+Clone the repository to your local machine using Git:
+
+git clone https://github.com/your-repo/employee-management-system.git
+cd employee-management-system
+
+2. Setup Kafka and Zookeeper Using Docker Compose
+
+Start Docker Compose :
+
+Kafka and Zookeeper will be run inside Docker using Docker Compose. You can find the docker-compose.yml file in the project directory.
+Ensure Docker is running on your machine, then navigate to the docker folder (where docker-compose.yml is located) and execute:
+
+docker-compose up -d
+
+To verify if Kafka and Zookeeper are running, execute:
+
+docker ps
+
+3. Set Up MySQL Database
+
+Make sure MySQL is installed on your local machine.
+Create a new MySQL database named ems_database:
+
+CREATE DATABASE employee_db;
+
+4. Spring Boot Profiles
+The application supports multiple profiles (e.g., dev, prod, etc.). You can specify the active profile in the application.properties file.
+
+# application.properties
+spring.profiles.active=dev
+
+5. Run the Spring Boot Application
+
+Using Maven
+Make sure you have Maven installed. Then, run the following command to start the Spring Boot application:
+mvn spring-boot:run
+
+6. Verify the Application
+Once the application is running, you can access the API endpoints for managing employees. Here are a few examples:
+Endpoint: POST /api/v1/ems/create-employee etc.
