@@ -18,7 +18,7 @@ This system is designed to manage employees efficiently with features like emplo
 - **Spring Data JPA**: For interacting with the database.
 - **JUnit 5**: For writing unit tests.
 - **Mockito**: For mocking the service layer in the unit tests.
-- **MyqSQL Database** (Optional): In-memory database for testing purposes.
+- **MySQL Database** (Optional): In-memory database for testing purposes.
 
 ## Getting Started
 
