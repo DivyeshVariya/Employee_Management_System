@@ -40,7 +40,7 @@ public class AuditLogConsumerService {
     @KafkaListener(
         topics = Constants.SYSTEM_AUIDT_LOG_TOPIC, 
         groupId = AuditLogConsumerConfig.GROUP_ID, 
-        containerFactory = "userStoreEventConcurrentKafkaListenerContainerFactory", 
+        containerFactory = "auditLogEventConcurrentKafkaListenerContainerFactory",
         autoStartup = "true"
     )
     public void consumeForAuditLog(AuditLogEvent auditLogEvent) {

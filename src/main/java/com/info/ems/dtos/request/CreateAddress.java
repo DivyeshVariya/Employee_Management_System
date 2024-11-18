@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreateAddress {
     @NotBlank(message = "street is required")
-	private String street;
+	  private String street;
     @NotBlank(message = "city is required")
     private String city;
     @NotBlank(message = "state is required")

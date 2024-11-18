@@ -127,7 +127,7 @@ public class EmployeeController {
      * @return A ResponseEntity containing a confirmation message.
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
+    public ResponseEntity<Response> deleteEmployee(@PathVariable Long id) {
         // Delete the employee and get the deletion status
         Map<String,Object> deleted = employeeService.deleteEmployee(id);
         
@@ -140,7 +140,7 @@ public class EmployeeController {
                                 .status(HttpStatus.OK)
                                 .statusCode(HttpStatus.OK.value())
                                 .data(Map.of(Constants.DATA, deleted))
-                                .message("Employee deleted successfully")
+                                .message("Employee deleted successfully.")
                                 .build());
     }
 }
